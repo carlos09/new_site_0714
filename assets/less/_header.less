@@ -1,0 +1,63 @@
+body {
+    font-family: abel;
+}
+
+.clear {
+    clear: both;
+}
+
+header {
+    background: @black;
+    border-bottom: none;
+
+    ul#menu-primary-navigation {
+      
+        li {
+            
+            a {
+                color: @teal;
+                font-size: @standard;
+            }
+        }  
+    }
+}
+
+main#header {
+    overflow-y:auto;
+    height: 100%vh;
+    
+    .header {
+        background-image: url("../img/header-bg.jpg");
+        background-attachment: fixed;
+        background-position: center -230px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 450px;
+    }
+
+    .content {
+        color: @white;
+        margin-top: 250px;
+
+        h1 {
+            font-size: 60px;
+        }
+
+        p{
+            font-size: 38px;
+        }
+    }
+
+    .intro-content {
+        padding: 60px 0;
+
+        p {
+            color: @gray;
+            font-size: @standard;
+             -webkit-animation-delay: .25s;
+            -moz-animation-delay: .25s;
+            -o-animation-delay: .25s;
+            -ms-animation-delay: .25s;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+section#about {
+    font-family: abel;
+    background: @black;
+    background: -moz-linear-gradient(left,  @black 50%, @light-teal 50%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%,@black), color-stop(50%,@light-teal));
+    background: -webkit-linear-gradient(left,  @black 50%,@light-teal 50%);
+    background: -o-linear-gradient(left,  @black 50%,@light-teal 50%);
+    background: -ms-linear-gradient(left,  @black 50%,@light-teal 50%);
+    background: linear-gradient(to right,  @black 50%,@light-teal 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@black', endColorstr='@light-teal',GradientType=1 );
+
+    .left-side {
+        background-color: @black;
+        padding: 30px;
+
+        h2 {
+            color: #fff;
+            font-size: 120px;
+
+            span.light-teal {
+                color: @light-teal;
+            }
+        }
+    }
+
+    .right-side {
+        background-color: @light-teal;
+        padding: 60px 30px;
+        height: 354px;
+
+        p {
+            color: @white;
+            font-size: 26px;
+        }
+    }
+}

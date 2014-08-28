@@ -1,0 +1,127 @@
+@font-face {
+    font-family: Glyphter;
+    src: url('../fonts/Glyphter.ttf');
+    src: url('../fonts/Glyphter.ttf') format('truetype');
+}
+@font-face {
+    font-family: Glyphter2;
+    src: url('../fonts/Glyphter2.ttf');
+    src: url('../fonts/Glyphter2.ttf') format('truetype');
+}
+
+.glyphter-1 {
+    font-family: Glyphter;
+}
+
+.glyphter-2 {
+    font-family: Glyphter2;
+}
+
+.visi-hidden {
+    visibility: hidden;
+}
+
+section#process {
+    background-color: @light-gray;
+    padding: 75px 0;
+    color: @gray;
+
+    &:after {
+        height: 100px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        width: 100px;
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        background-color: @light-gray;
+    }
+    
+    .step {
+        
+        .icon-top {
+
+            &.design {
+                transform: rotate(225deg);
+                -moz-transform: rotate(225deg);
+                -ms-transform: rotate(225deg); /* IE 9 */
+                -webkit-transform: rotate(225deg); /* Chrome, Safari, Opera */
+                transform: rotate(225deg);
+
+                span {
+                    padding: 20px 5px 30px 45px;
+
+                    &:hover {
+                        border: 8px solid @teal;
+                        -webkit-transition: border .25s ease-in-out;
+                        -moz-transition: border .25s ease-in-out;
+                        -ms-transition: border .25s ease-in-out;
+                        -o-transition: border .25s ease-in-out;
+                        transition: border .25s ease-in-out;
+                    }
+                }
+            }
+
+            &.develop {
+
+                span {
+                    padding: 25px 5px 25px 45px;
+
+                    &:hover {
+                        border: 8px solid @teal;
+                        -webkit-transition: border .25s ease-in-out;
+                        -moz-transition: border .25s ease-in-out;
+                        -ms-transition: border .25s ease-in-out;
+                        -o-transition: border .25s ease-in-out;
+                        transition: border .25s ease-in-out;
+                    }
+                }
+            }
+
+            &.deliver {
+
+                span {
+                    padding: 25px 5px 25px 45px;
+
+                    &:hover {
+                        border: 8px solid @teal;
+                        -webkit-transition: border .25s ease-in-out;
+                        -moz-transition: border .25s ease-in-out;
+                        -ms-transition: border .25s ease-in-out;
+                        -o-transition: border .25s ease-in-out;
+                        transition: border .25s ease-in-out;
+                    }
+                }
+            }
+
+            span.glyphter-1,
+            span.glyphter-2 {
+                font-size: 180px;
+                border-radius: 50%;
+            }
+        }
+
+    
+        h4 {
+            font-size: 40px;
+        }
+
+        p {
+           font-size: @standard; 
+        }
+    }
+
+    .step-develop {
+         -webkit-animation-delay: .25s;
+        -moz-animation-delay: .25s;
+        -o-animation-delay: .25s;
+        -ms-animation-delay: .25s;
+    }
+
+    .step-deliver {
+         -webkit-animation-delay: .5s;
+        -moz-animation-delay: .5s;
+        -o-animation-delay: .5s;
+        -ms-animation-delay: .5s;
+    }
+}

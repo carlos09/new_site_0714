@@ -1,0 +1,48 @@
+section#skills {
+    padding: 40px 0 75px;
+
+    &:after {
+        height: 100px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        width: 100px;
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        background-color: #fff;
+    }
+
+    h2 {
+        font-size: @heading;
+    }
+
+    .skills-left,
+    .skills-right {
+
+        .progress {
+            border-radius: 0;
+            box-shadow: none;
+            height: 40px;
+
+            .progress-bar { 
+                font-size: 24px;
+                padding-left: 20px;
+                padding-top: 10px;
+                background-color: @light-teal;
+                text-align: left;
+                color: #fff;
+            }
+
+            .progress-bar[aria-valuenow="0"] {
+                min-width: auto !important;
+            }
+
+            #css {
+                 -webkit-animation-delay: .25s;
+                -moz-animation-delay: .25s;
+                -o-animation-delay: .25s;
+                -ms-animation-delay: .25s;
+            }
+        }
+    }
+}

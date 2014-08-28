@@ -32,3 +32,30 @@ foreach ($roots_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+/*
+function roots_starter_modify_classes($classes,$widget,$instance){
+    print_r($instances);
+    if(isset($instance["panel-grid-cell"])) $classes[]=$instance["panel-grid-cell"];
+    return $classes;
+}
+add_filter("siteorigin_panels_custom_widget_class","roots_starter_modify_classes",10,3);
+ */
+
+function my_panels_row_style( $styles ) {
+        $styles['my-style-panels'] = __( 'My Style Panels', 'mytheme' );
+            return $styles;
+}
+add_filter( 'siteorigin_panels_row_styles', 'my_panels_row_style' );
+
+function my_panels_row_classes( $grid_classes ) {
+        $grid_classes[] = 'my-panel-grid';
+            return $grid_classes;
+}
+add_filter( 'siteorigin_panels_row_classes', 'my_panels_row_classes' );
+
+function my_panels_cell_classes( $cell_classes ) {
+        $cell_classes[] = 'my-panel-grid-cell';
+            return $cell_classes;
+}
+add_filter( 'siteorigin_panels_row_cell_classes', 'my_panels_cell_classes' );

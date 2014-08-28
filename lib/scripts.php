@@ -60,6 +60,15 @@ function roots_scripts() {
 }
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);
 
+/**
+    *  * Proper way to enqueue scripts and styles
+    *   */
+function custom_scripts() {
+    wp_enqueue_script( 'waypoints.min', get_template_directory_uri() . '/assets/js/waypoints.min.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/assets/js/waypoints.js', array('jquery'), '1.0.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'custom_scripts' );
+
 // http://wordpress.stackexchange.com/a/12450
 function roots_jquery_local_fallback($src, $handle = null) {
   static $add_jquery_fallback = false;
