@@ -64,8 +64,11 @@ add_action('wp_enqueue_scripts', 'roots_scripts', 100);
     *  * Proper way to enqueue scripts and styles
     *   */
 function custom_scripts() {
+    wp_enqueue_script( 'scrollTo.min', get_template_directory_uri() . '/assets/js/jquery.scrollTo.min.js', array('jquery'), '1.0.0', true );
     wp_enqueue_script( 'waypoints.min', get_template_directory_uri() . '/assets/js/waypoints.min.js', array('jquery'), '1.0.0', true );
     wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/assets/js/waypoints.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script( 'google.maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false', array(), '1.0.0', true );
+    wp_enqueue_script( 'map', get_template_directory_uri() . '/assets/js/map.js', array(), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 

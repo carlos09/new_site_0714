@@ -1,3 +1,17 @@
+$('.menu-about').click( function () {
+    $.scrollTo( 'section#about', 600, {offset: function() { return {top:-70}; }} );
+    return false;
+});
+
+$('.menu-portfolio').click( function () {
+    $.scrollTo( 'section#pieces', 600, {offset: function() { return {top:-80}; }} );
+    return false;
+});
+
+$('.menu-contact').click( function () {
+    $.scrollTo( '.contact-info', 600, {offset: function() { return {top:-80}; }} );
+    return false;
+});
 
 $('main#header').waypoint(function() {
     $('.intro-content p').removeClass('visi-hidden').addClass('animated fadeIn');
@@ -5,6 +19,13 @@ $('main#header').waypoint(function() {
 {
     offset: '75%',
     triggerOnce: true
+});
+
+$('.intro-content').waypoint(function() {
+    $('header.navbar').toggleClass('transition');
+},
+{
+    offset: '0'
 });
 
 $('section#about').waypoint(function() {

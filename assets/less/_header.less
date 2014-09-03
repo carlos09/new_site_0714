@@ -1,30 +1,114 @@
 body {
     font-family: abel;
+    position: relative;
 }
 
 .clear {
     clear: both;
 }
 
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container{
+    .row{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
 header {
-    background: @black;
+    background-color: @black;
     border-bottom: none;
+    padding: 10px 0;
+    -webkit-transition: background-color .25s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out;
+    -ms-transition: background-color .25s ease-in-out;
+    -o-transition: background-color .25s ease-in-out;
+    transition: background-color .25s ease-in-out;
+
+    &.transition {
+        background-color: rgba(4,5,6, .85);
+        -webkit-transition: background-color .25s ease-in-out;
+        -moz-transition: background-color .25s ease-in-out;
+        -ms-transition: background-color .25s ease-in-out;
+        -o-transition: background-color .25s ease-in-out;
+        transition: background-color .25s ease-in-out;
+
+        img.logo {
+            width: 40px;
+            -webkit-transition: width .25s ease-in-out;
+            -moz-transition: width .25s ease-in-out;
+            -ms-transition: width .25s ease-in-out;
+            -o-transition: width .25s ease-in-out;
+            transition: width .25s ease-in-out;
+        }
+    }
+
+    .navbar-brand {
+        padding: 0 15px;
+        
+        a {
+
+            img.logo {
+                display: block;
+                width: 80px;
+                -webkit-transition: width .25s ease-in-out;
+                -moz-transition: width .25s ease-in-out;
+                -ms-transition: width .25s ease-in-out;
+                -o-transition: width .25s ease-in-out;
+                transition: width .25s ease-in-out;
+            }
+        }
+    }
+
+    .navbar-toggle {
+        background-color: @teal;
+
+        .icon-bar {
+            background-color: @black;
+        }
+    }
 
     ul#menu-primary-navigation {
       
         li {
             
             a {
-                color: @teal;
-                font-size: @standard;
+                color: #fff;
+                font-size: 20px;
+
+                &:hover {
+                    color: @teal;
+                    background-color: transparent;
+                    -webkit-transition: color .25s ease-in-out;
+                    -moz-transition: color .25s ease-in-out;
+                    -ms-transition: color .25s ease-in-out;
+                    -o-transition: color .25s ease-in-out;
+                    transition: color .25s ease-in-out;
+                }
+            }
+
+            &.active {
+
+                a {
+                    color: @teal !important;
+                }
             }
         }  
     }
 }
 
+#map {
+    width: 100%;
+    height: 450px;
+}
+
 main#header {
     overflow-y:auto;
-    height: 100%vh;
+    padding: 0;
     
     .header {
         background-image: url("../img/header-bg.jpg");
